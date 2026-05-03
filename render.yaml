@@ -9,6 +9,8 @@ services:
     healthCheckPath: /api/health
     autoDeployTrigger: commit
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
       - key: LLM_API_KEY
         sync: false
       - key: LLM_BASE_URL
