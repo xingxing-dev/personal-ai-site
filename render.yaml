@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: personal-ai-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_BASE_URL
+        value: https://api.deepseek.com
+      - key: LLM_MODEL
+        value: deepseek-v4-pro
+      - key: CHROMA_PERSIST_DIR
+        value: ./chroma_db
+      - key: DATA_DIR
+        value: ./data
+      - key: TOP_K
+        value: 6
+      - key: SIMILARITY_THRESHOLD
+        value: 1.2
+      - key: CORS_ORIGINS
+        value: http://localhost:3000,https://olivia.dpdns.org
+      - key: CORS_ORIGIN_REGEX
+        value: https://.*\.vercel\.app

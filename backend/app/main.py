@@ -13,7 +13,12 @@ app.state.config = config.settings
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://olivia.dpdns.org"],
+    allow_origins=[
+        origin.strip()
+        for origin in config.settings.cors_origins.split(",")
+        if origin.strip()
+    ],
+    allow_origin_regex=config.settings.cors_origin_regex or None,
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )

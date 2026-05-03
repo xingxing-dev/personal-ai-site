@@ -13,6 +13,13 @@ class Settings(BaseSettings):
     top_k: int = 6
     similarity_threshold: float = 1.2
 
+    # HTTP
+    cors_origins: str = (
+        "http://localhost:3000,"
+        "https://olivia.dpdns.org"
+    )
+    cors_origin_regex: str = r"https://.*\.vercel\.app"
+
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 
 

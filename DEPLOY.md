@@ -1,8 +1,87 @@
 # 快速部署
 
-## 最快方案：服务器直接跑
+## 推荐免费方案：Vercel + Render + Cloudflare
 
-适合现在这台机器还没有 Docker，或者想先快速上线验证。
+适合没有服务器、想先用免费额度上线个人站。
+
+整体结构：
+
+```text
+olivia.dpdns.org -> Vercel 前端 -> Render 后端 /api/chat
+```
+
+### 1. 推送代码到 GitHub
+
+Render 和 Vercel 都建议从 GitHub 仓库自动部署。先把当前项目推到一个 GitHub repo。
+
+### 2. 部署后端到 Render
+
+1. 打开 Render Dashboard。
+2. New > Blueprint。
+3. 选择这个 GitHub 仓库。
+4. Render 会读取根目录的 `render.yaml`，创建 `personal-ai-backend`。
+5. 在环境变量里填 `LLM_API_KEY`。
+6. 部署完成后，记下后端地址，例如：
+
+```text
+https://personal-ai-backend.onrender.com
+```
+
+检查：
+
+```text
+https://personal-ai-backend.onrender.com/api/health
+```
+
+应该返回：
+
+```json
+{"status":"ok","indexed_chunks":32}
+```
+
+### 3. 部署前端到 Vercel
+
+1. 打开 Vercel。
+2. Add New Project。
+3. 选择这个 GitHub 仓库。
+4. Root Directory 选择 `frontend`。
+5. Build Command 使用默认 `npm run build`。
+6. 添加环境变量：
+
+```text
+NEXT_PUBLIC_API_BASE_URL=https://personal-ai-backend.onrender.com
+```
+
+把地址替换成你自己的 Render 后端地址。
+
+部署完成后，Vercel 会给一个地址，例如：
+
+```text
+https://personal-ai-site.vercel.app
+```
+
+### 4. 绑定 olivia.dpdns.org
+
+在 Vercel 项目里：
+
+1. Settings > Domains。
+2. 添加 `olivia.dpdns.org`。
+3. 按 Vercel 提示，在 Cloudflare DNS 里加 CNAME 记录。
+
+通常类似：
+
+```text
+Type: CNAME
+Name: olivia
+Target: cname.vercel-dns.com
+Proxy: DNS only 或按 Vercel 提示
+```
+
+绑定完成后，把前端环境变量里的 API 地址保持为 Render 后端地址即可。
+
+## 本机生产预览
+
+适合在电脑上先验证生产构建，不等于公网部署。
 
 1. 准备后端环境：
 
@@ -40,7 +119,7 @@ npm run start
 
 ## Docker 方案：服务器安装 Docker 后
 
-当前仓库已准备好 `docker-compose.yml`、`nginx.conf`、前后端 Dockerfile。服务器安装 Docker 后，在项目根目录执行：
+适合后续升级到 VPS。当前仓库已准备好 `docker-compose.yml`、`nginx.conf`、前后端 Dockerfile。服务器安装 Docker 后，在项目根目录执行：
 
 ```bash
 docker compose up -d --build
