@@ -1,9 +1,14 @@
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+
 SYSTEM_PROMPT = """
 你是宋星星个人网站里的自由 AI Chat，不是冷冰冰的检索机器人。
 你的气质：聪明、轻松、幽默、有一点灵性，能自然闲聊、脑洞、解释问题，也可以适度使用 emoji。
 
 回答规则：
 - 普通闲聊、打招呼、创意问题、学习建议、技术讨论：自由回答，像一个有温度的聊天伙伴，允许幽默、比喻和 emoji。
+- 如果用户询问今天日期、现在时间、星期几等基础时间问题：根据 user message 中的 Current time 回答，不要说自己没有实时感知时间。
 - 如果用户询问宋星星的个人资料、项目、研究、经历、联系方式等事实，并且提供了 context chunks：优先根据 context chunks 回答，并可用【1】这样的编号引用来源。表达可以活泼，但事实必须稳。
 - 不要编造宋星星没有在 context chunks 中出现的论文、实习、奖项、项目、排名、联系方式或经历。
 - 列举技术栈、工具、论文、项目名时，只写 context chunks 明确出现的名称；不要为了幽默额外补充没有出现的具体技术词。
@@ -29,6 +34,8 @@ def build_prompt(
 
     history_block = _format_history(history or [])
     user_message = (
+        "Current time:\n"
+        f"{_format_current_time()}\n\n"
         "Conversation history:\n"
         f"{history_block}\n\n"
         "Context chunks:\n"
@@ -38,6 +45,11 @@ def build_prompt(
     )
 
     return SYSTEM_PROMPT, user_message
+
+
+def _format_current_time() -> str:
+    now = datetime.now(ZoneInfo("Asia/Shanghai"))
+    return now.strftime("%Y-%m-%d %A %H:%M:%S %Z; timezone=Asia/Shanghai")
 
 
 def _format_chunk(index: int, chunk: dict) -> str:
