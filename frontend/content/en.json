@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "projects": "Projects",
+    "skills": "Skills",
+    "awards": "Awards",
+    "resume": "Resume",
+    "ask": "AI Chat",
+    "contact": "Contact"
+  },
+  "titleBar": "Xingxing's Personal Assistant",
+  "navHeader": "Navigation",
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Xingxing Song",
+    "tagline": "BJTU · Artificial Intelligence",
+    "sub": "LLM & Agent Researcher · Dreaming AGI",
+    "intro": "Welcome to my personal website. I'm a sophomore at Beijing Jiaotong University majoring in AI, focused on LLM training and Agent research, striving toward AGI. Here you can explore my academic background, research projects, and tech stack. Feel free to use the AI Chat to learn more about me.",
+    "stats": [
+      { "label": "Research Projects", "value": "3" },
+      { "label": "Tech Domains", "value": "10+" },
+      { "label": "Awards", "value": "5+" },
+      { "label": "NeurIPS Submission", "value": "1" }
+    ],
+    "heroWords": ["Explore", "Create", "Research", "Build"],
+    "aiCta": "Want to know more? Try AI Chat",
+    "aiCtaSub": "Ask questions in natural language — AI will answer based on my profile",
+    "aiCtaBtn": "Start Chatting"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "I'm Xingxing Song, a sophomore majoring in Artificial Intelligence at Beijing Jiaotong University (Class of 2024). I focus on LLM Training and Agent research, devoted to achieving Artificial General Intelligence (AGI).",
+      "I'm passionate about AI and coding, fascinated by the logical beauty of code. I feel the pulse of AI in the human world — the emergence of silicon-based life.",
+      "I'm a sunny, cheerful, and enthusiastic person. Calm, independent, and open-minded. I love sports — gym, swimming, running, tennis, hiking, baseball, badminton. I also love traveling — I've been to Suzhou, Shanghai, Xiamen, Ordos, Hulunbuir, Harbin, and my next destination is California."
+    ],
+    "interestsTitle": "Research Interests",
+    "interests": ["LLM Training", "Agent", "Agentic RL", "Post-training", "Coding Agent", "Deep RL"],
+    "hobbiesTitle": "Hobbies",
+    "hobbies": ["Gym", "Swimming", "Running", "Tennis", "Hiking", "Baseball", "Badminton", "Travel"]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "school": "Beijing Jiaotong University",
+        "degree": "B.E. in Artificial Intelligence",
+        "period": "2024 – 2028 (Expected)",
+        "desc": "School of Computer Science. Courses: Reinforcement Learning, Algorithm Design & Analysis, AI Mathematical Foundations, Data Structures, Calculus, Linear Algebra, Probability Theory."
+      },
+      {
+        "school": "Ruijin No.1 High School",
+        "degree": "High School",
+        "period": "",
+        "desc": "Ruijin, Jiangxi Province"
+      },
+      {
+        "school": "Ruijin No.3 Middle School",
+        "degree": "Middle School",
+        "period": "",
+        "desc": "Ruijin, Jiangxi Province"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "GUITestBench: GUI Agent Benchmark",
+        "desc": "Co-proposed the first systematic benchmark for evaluating GUI Agents' autonomous defect detection, covering 18 real open-source Apps and 143 GitHub Issue-driven defect reproduction tasks. Designed the LLM-as-Judge framework with multi-source verdict methods and Defect Recall/Precision/F1 metrics.",
+        "tags": ["NeurIPS 2026 Sub.", "GUI Agent", "LLM-as-Judge", "Python"],
+        "period": "2025 – Present",
+        "type": "Conference Paper",
+        "mentor": "Prof. Jitao Sang"
+      },
+      {
+        "title": "Explainable Video Forensics Framework",
+        "desc": "As a core member (team of 2), designed MCP-based heterogeneous tool-chain orchestration, researched MoE expert orthogonalization across physics, semantics, and spatiotemporal consistency, and co-built chain-of-thought structured n-tuple explainable forensic output.",
+        "tags": ["Beijing NSF Grant", "Multimodal Agent", "MoE", "MCP"],
+        "period": "2026 – Present",
+        "type": "Research · Qiyan Program",
+        "mentor": "Prof. Yao Zhao (IEEE Fellow)"
+      },
+      {
+        "title": "RISC-V Rust Lightweight RTOS",
+        "desc": "Built a lightweight RTOS kernel from scratch in Rust on RISC-V 64-bit, implementing preemptive multitasking, atomic synchronization primitives, 8 syscalls, and UART/VGA/PCI drivers. Responsible for compiler toolchain adaptation and filesystem development.",
+        "tags": ["Innovation Project", "Rust", "RISC-V", "OS"],
+        "period": "2025",
+        "type": "Undergraduate Innovation",
+        "mentor": "Prof. Bo Gao"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "legend": { "expert": "Expert", "proficient": "Proficient", "familiar": "Familiar" },
+    "categories": [
+      {
+        "name": "Languages",
+        "skills": [
+          { "name": "C++", "level": "expert" },
+          { "name": "Python", "level": "expert" },
+          { "name": "Rust", "level": "proficient" },
+          { "name": "Java", "level": "proficient" },
+          { "name": "Go", "level": "familiar" }
+        ]
+      },
+      {
+        "name": "AI / ML",
+        "skills": [
+          { "name": "PyTorch", "level": "expert" },
+          { "name": "Transformer", "level": "expert" },
+          { "name": "TensorFlow", "level": "proficient" },
+          { "name": "MoE", "level": "proficient" },
+          { "name": "RLHF / GRPO", "level": "proficient" }
+        ]
+      },
+      {
+        "name": "Frontend",
+        "skills": [
+          { "name": "React", "level": "proficient" },
+          { "name": "HTML / CSS / JS", "level": "proficient" },
+          { "name": "Vue", "level": "familiar" }
+        ]
+      },
+      {
+        "name": "Backend & Tools",
+        "skills": [
+          { "name": "FastAPI / Flask", "level": "proficient" },
+          { "name": "Node.js", "level": "proficient" },
+          { "name": "Redis", "level": "familiar" }
+        ]
+      },
+      {
+        "name": "AI Engineering",
+        "skills": [
+          { "name": "Prompt Engineering", "level": "expert" },
+          { "name": "Context Engineering", "level": "expert" },
+          { "name": "Claude Code", "level": "expert" },
+          { "name": "Codex", "level": "proficient" }
+        ]
+      }
+    ]
+  },
+  "awards": {
+    "title": "Awards",
+    "items": [
+      { "title": "Challenge Cup", "award": "University 2nd Prize", "year": "2025" },
+      { "title": "Challenge Cup", "award": "University 3rd Prize", "year": "2025" },
+      { "title": "Merit Student", "award": "University Level", "year": "" },
+      { "title": "Outstanding League Cadre", "award": "University Level", "year": "" },
+      { "title": "Outstanding League Member", "award": "University Level", "year": "" },
+      { "title": "Academic Excellence Scholarship", "award": "Second-Class", "year": "" }
+    ]
+  },
+  "resume": {
+    "title": "Resume",
+    "filename": "Xingxing_Song_Resume.pdf",
+    "updated": "PDF · Last updated May 2026",
+    "download": "Download Resume",
+    "previewTitle": "Resume Preview",
+    "previewNote": "PDF resume preview will be embedded here in a future version."
+  },
+  "ask": {
+    "title": "AI Chat",
+    "placeholder": "Ask me anything…",
+    "send": "Send",
+    "thinking": "Thinking",
+    "suggestLabel": "Try asking about me:",
+    "suggestions": [
+      "What projects has he done?",
+      "What is his research focus?",
+      "What tech stack does he use?",
+      "What kind of person is he?"
+    ],
+    "sourcesLabel": "Sources",
+    "errorOffline": "Backend service is not connected. Please ensure the backend is running."
+  },
+  "contact": {
+    "title": "Contact",
+    "items": [
+      { "label": "University Email", "value": "24251269@bjtu.edu.cn", "icon": "mail" },
+      { "label": "Personal Email", "value": "xingixngsong@gmail.com", "icon": "mail" },
+      { "label": "GitHub", "value": "github.com/xingxing-dev", "icon": "github" },
+      { "label": "WeChat", "value": "bjsxx069216", "icon": "message-circle" },
+      { "label": "Phone", "value": "18038686255", "icon": "phone" }
+    ]
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我",
+    "education": "教育经历",
+    "projects": "项目经历",
+    "skills": "技能栈",
+    "awards": "获奖经历",
+    "resume": "简历",
+    "ask": "AI 问答",
+    "contact": "联系方式"
+  },
+  "titleBar": "Xingxing 的个人助手",
+  "navHeader": "导航",
+  "home": {
+    "greeting": "你好，我是",
+    "name": "宋星星",
+    "tagline": "北京交通大学 · 人工智能专业",
+    "sub": "LLM & Agent Researcher · Dreaming AGI",
+    "intro": "欢迎来到我的个人网站。我是北京交通大学 AI 专业大二学生，专注于大语言模型训练和智能体研究，致力于实现 AGI。这里展示了我的学术背景、科研项目和技术栈。你还可以通过 AI 问答页面，用自然语言了解我的更多信息。",
+    "stats": [
+      { "label": "科研项目", "value": "3" },
+      { "label": "技术方向", "value": "10+" },
+      { "label": "荣誉奖项", "value": "5+" },
+      { "label": "NeurIPS 在投", "value": "1" }
+    ],
+    "heroWords": ["探索", "创造", "研究", "构建"],
+    "aiCta": "想更了解我？试试 AI 对话",
+    "aiCtaSub": "用自然语言向 AI 提问，它会基于我的资料为你解答",
+    "aiCtaBtn": "开始对话"
+  },
+  "about": {
+    "title": "关于我",
+    "paragraphs": [
+      "我是宋星星，北京交通大学计算机科学与技术学院人工智能专业大二本科生（2024 级）。我专注于大语言模型训练（LLM Training）和智能体（Agent）研究，致力于实现通用人工智能（AGI）。",
+      "我热爱人工智能，热爱 coding，着迷于代码的逻辑魅力。我感受着 AI 的呼吸，感受着它们在人类世界的律动——那是一种硅基生命的勃发。",
+      "我是一个阳光、活泼且充满热情的人。平和、独立、不带偏见，喜欢冷静地思考每一件事情。我热爱运动——健身、游泳、跑步、网球、徒步、棒球、羽毛球。我也热爱旅行，走过苏州、上海、厦门、鄂尔多斯、呼伦贝尔、哈尔滨，下一个目标是美国加州。"
+    ],
+    "interestsTitle": "研究兴趣",
+    "interests": ["LLM Training", "Agent", "Agentic RL", "Post-training", "Coding Agent", "Deep RL"],
+    "hobbiesTitle": "爱好",
+    "hobbies": ["健身", "游泳", "跑步", "网球", "徒步", "棒球", "羽毛球", "旅行"]
+  },
+  "education": {
+    "title": "教育经历",
+    "items": [
+      {
+        "school": "北京交通大学",
+        "degree": "人工智能 · 本科",
+        "period": "2024 – 2028（预计）",
+        "desc": "计算机科学与技术学院。主修课程：强化学习、算法设计与分析、人工智能数学基础、数据结构、微积分、线性代数、概率论。"
+      },
+      {
+        "school": "瑞金第一中学",
+        "degree": "高中",
+        "period": "",
+        "desc": "江西省瑞金市"
+      },
+      {
+        "school": "瑞金市第三中学",
+        "degree": "初中",
+        "period": "",
+        "desc": "江西省瑞金市"
+      }
+    ]
+  },
+  "projects": {
+    "title": "项目经历",
+    "items": [
+      {
+        "title": "GUITestBench：GUI Agent 评测基准",
+        "desc": "参与提出首个系统化评估 GUI Agent 自主缺陷发现能力的评测基准，覆盖 18 款真实开源 App、143 个 GitHub Issue 驱动的缺陷复现任务。主要参与设计 LLM-as-Judge 自动裁判框架，定义融合缺陷规约、截图与行为轨迹的多源判定方法及 Defect Recall/Precision/F1 指标体系。",
+        "tags": ["NeurIPS 2026 在投", "GUI Agent", "LLM-as-Judge", "Python"],
+        "period": "2025 – 至今",
+        "type": "会议论文",
+        "mentor": "桑基韬教授"
+      },
+      {
+        "title": "可解释视频取证框架",
+        "desc": "作为核心成员（团队共 2 人），负责设计基于 MCP 协议的异构工具链协同调度机制，研究 MoE 架构下物理规律、语义自洽与空时一致性三维度专家的正交化训练策略与跨模态证据融合方法。",
+        "tags": ["北京市自然基金", "多模态 Agent", "MoE", "MCP"],
+        "period": "2026 – 至今",
+        "type": "科研项目 · 启研计划",
+        "mentor": "赵耀教授（IEEE Fellow）"
+      },
+      {
+        "title": "RISC-V Rust 轻量级 RTOS",
+        "desc": "基于 Rust 在 RISC-V 64 位架构上从零构建轻量级 RTOS 内核，实现抢占式多任务调度、原子同步原语、8 项系统调用及多设备驱动。负责编译器工具链适配与文件系统模块开发。",
+        "tags": ["大创项目", "Rust", "RISC-V", "OS"],
+        "period": "2025",
+        "type": "大学生创新训练项目",
+        "mentor": "高勃教授"
+      }
+    ]
+  },
+  "skills": {
+    "title": "技能栈",
+    "legend": { "expert": "精通", "proficient": "熟练", "familiar": "了解" },
+    "categories": [
+      {
+        "name": "编程语言",
+        "skills": [
+          { "name": "C++", "level": "expert" },
+          { "name": "Python", "level": "expert" },
+          { "name": "Rust", "level": "proficient" },
+          { "name": "Java", "level": "proficient" },
+          { "name": "Go", "level": "familiar" }
+        ]
+      },
+      {
+        "name": "AI / ML",
+        "skills": [
+          { "name": "PyTorch", "level": "expert" },
+          { "name": "Transformer", "level": "expert" },
+          { "name": "TensorFlow", "level": "proficient" },
+          { "name": "MoE", "level": "proficient" },
+          { "name": "RLHF / GRPO", "level": "proficient" }
+        ]
+      },
+      {
+        "name": "前端开发",
+        "skills": [
+          { "name": "React", "level": "proficient" },
+          { "name": "HTML / CSS / JS", "level": "proficient" },
+          { "name": "Vue", "level": "familiar" }
+        ]
+      },
+      {
+        "name": "后端 & 工具",
+        "skills": [
+          { "name": "FastAPI / Flask", "level": "proficient" },
+          { "name": "Node.js", "level": "proficient" },
+          { "name": "Redis", "level": "familiar" }
+        ]
+      },
+      {
+        "name": "AI 工程",
+        "skills": [
+          { "name": "Prompt Engineering", "level": "expert" },
+          { "name": "Context Engineering", "level": "expert" },
+          { "name": "Claude Code", "level": "expert" },
+          { "name": "Codex", "level": "proficient" }
+        ]
+      }
+    ]
+  },
+  "awards": {
+    "title": "获奖经历",
+    "items": [
+      { "title": "挑战杯", "award": "校级二等奖", "year": "2025" },
+      { "title": "挑战杯", "award": "校级三等奖", "year": "2025" },
+      { "title": "三好学生", "award": "校级", "year": "" },
+      { "title": "优秀团干部", "award": "校级", "year": "" },
+      { "title": "优秀团员", "award": "校级", "year": "" },
+      { "title": "优秀学习奖学金", "award": "二等", "year": "" }
+    ]
+  },
+  "resume": {
+    "title": "简历",
+    "filename": "宋星星_简历.pdf",
+    "updated": "PDF · 最后更新于 2026 年 5 月",
+    "download": "下载简历",
+    "previewTitle": "简历预览",
+    "previewNote": "PDF 简历预览将在后续版本中嵌入此处。"
+  },
+  "ask": {
+    "title": "AI 问答",
+    "placeholder": "输入你的问题…",
+    "send": "发送",
+    "thinking": "正在思考",
+    "suggestLabel": "试着问我一些问题：",
+    "suggestions": [
+      "他做过哪些项目？",
+      "他的研究方向是什么？",
+      "他掌握了哪些技术栈？",
+      "他是什么样的人？"
+    ],
+    "sourcesLabel": "参考来源",
+    "errorOffline": "后端服务暂未连接，请确认后端已启动。"
+  },
+  "contact": {
+    "title": "联系方式",
+    "items": [
+      { "label": "教育邮箱", "value": "24251269@bjtu.edu.cn", "icon": "mail" },
+      { "label": "个人邮箱", "value": "xingixngsong@gmail.com", "icon": "mail" },
+      { "label": "GitHub", "value": "github.com/xingxing-dev", "icon": "github" },
+      { "label": "微信", "value": "bjsxx069216", "icon": "message-circle" },
+      { "label": "电话", "value": "18038686255", "icon": "phone" }
+    ]
+  }
+}
