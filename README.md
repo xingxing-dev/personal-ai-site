@@ -1,4 +1,4 @@
-# Personal AI Site
+# Personal AI Site ✨
 
 [English](./README.md) | [中文](./README_CN.md)
 
@@ -8,23 +8,23 @@ The site is both a portfolio and a conversational interface. Visitors can browse
 
 Live demo:
 
-- Website: https://personal-ai-site-nu.vercel.app
-- AI Chat: https://personal-ai-site-nu.vercel.app/ask
-- Backend health check: https://personal-ai-backend-itq1.onrender.com/api/health
+- 🌐 Website: https://personal-ai-site-nu.vercel.app
+- 💬 AI Chat: https://personal-ai-site-nu.vercel.app/ask
+- 🩺 Backend health check: https://personal-ai-backend-itq1.onrender.com/api/health
 
-## Highlights
+## ✨ Highlights
 
-- Personal website with desktop-inspired UI, dark mode, bilingual content, and animated interactions.
-- Free-form AI chat that can answer casual questions, creative prompts, and general technical questions.
-- RAG mode for personal facts, projects, skills, research, education, awards, contact details, and FAQs.
-- Hybrid retrieval strategy combining ChromaDB vector search and local lexical matching for more reliable Chinese queries.
-- Multi-turn chat support with short-term conversation history.
-- Source cards that show reference location without exposing full retrieved chunks.
-- Current time context injection, so the assistant can answer date/time questions accurately.
-- SQLite logging for Q&A records.
-- Deployment-ready configs for Vercel, Render, Docker Compose, and Nginx.
+- 🖥️ Personal website with desktop-inspired UI, dark mode, bilingual content, and animated interactions.
+- 💬 Free-form AI chat that can answer casual questions, creative prompts, and general technical questions.
+- 📚 RAG mode for personal facts, projects, skills, research, education, awards, contact details, and FAQs.
+- 🔎 Hybrid retrieval strategy combining ChromaDB vector search and local lexical matching for more reliable Chinese queries.
+- 🧠 Multi-turn chat support with short-term conversation history.
+- 🗂️ Source cards that show reference location without exposing full retrieved chunks.
+- 🕒 Current time context injection, so the assistant can answer date/time questions accurately.
+- 📝 SQLite logging for Q&A records.
+- 🚀 Deployment-ready configs for Vercel, Render, Docker Compose, and Nginx.
 
-## Tech Stack
+## 🧰 Tech Stack
 
 Frontend:
 
@@ -49,7 +49,7 @@ Deployment:
 - Render for backend
 - Docker Compose and Nginx for future VPS deployment
 
-## Architecture
+## 🏗️ Architecture
 
 ```text
 Browser
@@ -82,7 +82,7 @@ DeepSeek LLM
 Answer + source metadata
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 .
@@ -112,7 +112,7 @@ Answer + source metadata
 └── DEPLOY.md
 ```
 
-## Local Development
+## 🛠️ Local Development
 
 ### Backend
 
@@ -165,7 +165,7 @@ http://localhost:3000
 http://localhost:3000/ask
 ```
 
-## Environment Variables
+## 🔐 Environment Variables
 
 Backend:
 
@@ -189,7 +189,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
 
 For Vercel production, set `NEXT_PUBLIC_API_BASE_URL` to the Render backend URL.
 
-## Deployment
+## 🚀 Deployment
 
 Current free deployment:
 
@@ -212,7 +212,7 @@ For VPS deployment, the repository also includes:
 
 See [DEPLOY.md](./DEPLOY.md) for detailed deployment notes.
 
-## API
+## 🔌 API
 
 Health:
 
@@ -266,7 +266,7 @@ Response:
 }
 ```
 
-## Knowledge Base
+## 📚 Knowledge Base
 
 The knowledge base lives in `backend/data` as markdown files. Each file can contain frontmatter:
 
@@ -285,15 +285,15 @@ cd backend
 python scripts/ingest.py --reset
 ```
 
-## Roadmap
+## 🗺️ Roadmap
 
-- Add project screenshots and richer media assets.
-- Add streaming chat responses.
-- Add optional web search for freshness-sensitive questions.
-- Add GitHub project ingestion.
-- Add an agent-style tool layer as a separate research playground.
-- Add authentication for private admin edits.
+- 🖼️ Add project screenshots and richer media assets.
+- 🌊 Add streaming chat responses.
+- 🌍 Add optional web search for freshness-sensitive questions.
+- 🧩 Add GitHub project ingestion.
+- 🛠️ Add an agent-style tool layer as a separate research playground.
+- 🔐 Add authentication for private admin edits.
 
-## License
+## 📄 License
 
 MIT License. See [LICENSE](./LICENSE).

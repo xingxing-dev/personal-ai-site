@@ -1,4 +1,4 @@
-# Personal AI Site
+# Personal AI Site ✨
 
 [English](./README.md) | [中文](./README_CN.md)
 
@@ -8,23 +8,23 @@
 
 在线体验：
 
-- 网站首页：https://personal-ai-site-nu.vercel.app
-- AI Chat：https://personal-ai-site-nu.vercel.app/ask
-- 后端健康检查：https://personal-ai-backend-itq1.onrender.com/api/health
+- 🌐 网站首页：https://personal-ai-site-nu.vercel.app
+- 💬 AI Chat：https://personal-ai-site-nu.vercel.app/ask
+- 🩺 后端健康检查：https://personal-ai-backend-itq1.onrender.com/api/health
 
-## 项目亮点
+## ✨ 项目亮点
 
-- 桌面窗口风格的个人网站界面，支持深色模式、中英双语和动效交互。
-- 自由 AI Chat：支持闲聊、创意问题、学习建议和普通技术讨论。
-- 个人资料 RAG：针对项目、技术栈、研究方向、教育背景、获奖、联系方式和 FAQ 等个人事实进行检索增强回答。
-- 混合检索策略：结合 ChromaDB 向量检索和本地关键词检索，提升中文问题命中率。
-- 多轮对话：前端会携带最近对话历史，后端可理解“他”“第二个项目”“刚才那个”等指代。
-- 来源展示：展示参考资料位置，但不把完整 chunk 内容直接暴露在页面上。
-- 当前时间上下文：后端会把当前时间注入 prompt，支持回答日期、时间、星期几等问题。
-- SQLite 问答日志：记录用户问题和模型回答，便于后续分析。
-- 已准备 Vercel、Render、Docker Compose 和 Nginx 部署配置。
+- 🖥️ 桌面窗口风格的个人网站界面，支持深色模式、中英双语和动效交互。
+- 💬 自由 AI Chat：支持闲聊、创意问题、学习建议和普通技术讨论。
+- 📚 个人资料 RAG：针对项目、技术栈、研究方向、教育背景、获奖、联系方式和 FAQ 等个人事实进行检索增强回答。
+- 🔎 混合检索策略：结合 ChromaDB 向量检索和本地关键词检索，提升中文问题命中率。
+- 🧠 多轮对话：前端会携带最近对话历史，后端可理解“他”“第二个项目”“刚才那个”等指代。
+- 🗂️ 来源展示：展示参考资料位置，但不把完整 chunk 内容直接暴露在页面上。
+- 🕒 当前时间上下文：后端会把当前时间注入 prompt，支持回答日期、时间、星期几等问题。
+- 📝 SQLite 问答日志：记录用户问题和模型回答，便于后续分析。
+- 🚀 已准备 Vercel、Render、Docker Compose 和 Nginx 部署配置。
 
-## 技术栈
+## 🧰 技术栈
 
 前端：
 
@@ -49,7 +49,7 @@
 - Render 部署后端
 - Docker Compose + Nginx 用于后续 VPS 部署
 
-## 架构
+## 🏗️ 架构
 
 ```text
 Browser
@@ -82,7 +82,7 @@ DeepSeek LLM
 Answer + source metadata
 ```
 
-## 目录结构
+## 📁 目录结构
 
 ```text
 .
@@ -112,7 +112,7 @@ Answer + source metadata
 └── DEPLOY.md
 ```
 
-## 本地开发
+## 🛠️ 本地开发
 
 ### 后端
 
@@ -165,7 +165,7 @@ http://localhost:3000
 http://localhost:3000/ask
 ```
 
-## 环境变量
+## 🔐 环境变量
 
 后端：
 
@@ -189,7 +189,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
 
 Vercel 生产环境中，`NEXT_PUBLIC_API_BASE_URL` 应填写 Render 后端地址。
 
-## 部署
+## 🚀 部署
 
 当前免费部署方案：
 
@@ -212,7 +212,7 @@ NEXT_PUBLIC_API_BASE_URL=https://your-render-backend.onrender.com
 
 详细说明见 [DEPLOY.md](./DEPLOY.md)。
 
-## API
+## 🔌 API
 
 健康检查：
 
@@ -266,7 +266,7 @@ Content-Type: application/json
 }
 ```
 
-## 知识库
+## 📚 知识库
 
 知识库位于 `backend/data`，使用 Markdown 文件维护。每个文件可以带 frontmatter：
 
@@ -285,15 +285,15 @@ cd backend
 python scripts/ingest.py --reset
 ```
 
-## 路线图
+## 🗺️ 路线图
 
-- 添加项目截图和更丰富的媒体素材。
-- 支持流式聊天响应。
-- 为时效性问题增加可选 Web Search。
-- 增加 GitHub 项目自动摄取。
-- 将工具调用和 Agent 能力作为独立研究模块扩展。
-- 增加私有后台编辑能力。
+- 🖼️ 添加项目截图和更丰富的媒体素材。
+- 🌊 支持流式聊天响应。
+- 🌍 为时效性问题增加可选 Web Search。
+- 🧩 增加 GitHub 项目自动摄取。
+- 🛠️ 将工具调用和 Agent 能力作为独立研究模块扩展。
+- 🔐 增加私有后台编辑能力。
 
-## 开源协议
+## 📄 开源协议
 
 本项目采用 MIT License，详见 [LICENSE](./LICENSE)。
