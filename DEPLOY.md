@@ -46,7 +46,7 @@ npm run start
 docker compose up -d --build
 ```
 
-访问服务器 80 端口即可打开网站，前端会通过同源 `/api` 调用后端。
+访问服务器 80 端口即可打开网站，前端会通过同源 `/api/chat` 和 `/api/health` 调用后端。
 
 ## 输入长度配置
 
