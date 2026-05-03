@@ -14,13 +14,21 @@ updated: "2026-05-03"
 
 ## 他做过哪些项目？
 
-1. GUITestBench：NeurIPS 2026 在投论文，GUI Agent 缺陷检测评测基准
-2. 可解释视频取证框架：北京市自然科学基金项目，多模态智能体协同推理
-3. RISC-V Rust RTOS：大创项目，从零构建轻量级实时操作系统
+他目前有三段核心项目经历：
+
+1. **GUITestBench**：面向移动应用缺陷发现的 GUI Agent 评测基准，NeurIPS 2026 在投论文，署名作者。项目覆盖 18 款真实开源 App 和 143 个 GitHub Issue 驱动任务，他主要参与 LLM-as-Judge 自动裁判框架、Defect Recall/Precision/F1 指标体系和主流 GUI Agent 评测。
+2. **可解释视频取证框架**：北京市自然科学基金本科生"启研"计划项目，资助 5 万元。他作为核心成员参与多模态智能体协同推理框架，负责 MCP 异构工具链调度、MoE 专家训练策略和跨模态证据融合。
+3. **RISC-V Rust 轻量级 RTOS**：大学生创新训练项目，已通过结题。他基于 Rust 与 RISC-V 64 位架构参与构建实时操作系统内核，负责编译器工具链适配与文件系统模块开发。
 
 ## 他的技术栈？
 
-精通 C++ 和 Python，熟练 Rust 和 Java，掌握 PyTorch、Transformer、RLHF 等 AI/ML 技术，熟悉 React 前端开发和 FastAPI 后端开发。
+他的技术栈偏 AI 研究与系统工程结合：
+
+- **编程语言**：精通 C++、Python，熟练 Rust、Java，了解 Go。
+- **AI / ML**：熟悉 PyTorch、Transformer、MoE、RLHF、GRPO、LLM-as-Judge、Agent Benchmark、Agentic RL、Post-training。
+- **Agent 与工具链**：熟悉 Prompt Engineering、Context Engineering、MCP 协议、Harness Engineering、Claude Code、Codex。
+- **工程开发**：熟悉 React 前端、FastAPI/Flask 后端、Node.js、SQLite、ChromaDB、REST API。
+- **系统底层**：具备 Rust、RISC-V、RTOS、文件系统、编译器工具链适配、系统调用和驱动开发经验。
 
 ## 他有实习经历吗？
 

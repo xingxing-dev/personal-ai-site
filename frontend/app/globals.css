@@ -7,8 +7,8 @@
 }
 
 @theme inline {
-  --font-serif: var(--font-noto-serif-sc), var(--font-source-serif-4), Georgia, serif;
-  --font-en: var(--font-source-serif-4), Georgia, "Times New Roman", serif;
+  --font-serif: "Noto Serif SC", "Songti SC", "Source Han Serif SC", Georgia, serif;
+  --font-en: Georgia, "Times New Roman", serif;
 }
 
 /* ── macOS Desktop Background ── */

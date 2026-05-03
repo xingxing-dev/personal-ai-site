@@ -20,8 +20,10 @@ export default function Typewriter({ words }: { words: string[] }) {
       if (charCount > 0) {
         timer = setTimeout(() => setCharCount((c) => c - 1), 60);
       } else {
-        setDeleting(false);
-        setWordIdx((i) => (i + 1) % words.length);
+        timer = setTimeout(() => {
+          setDeleting(false);
+          setWordIdx((i) => (i + 1) % words.length);
+        }, 60);
       }
     }
     return () => clearTimeout(timer);

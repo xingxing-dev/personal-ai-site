@@ -7,7 +7,6 @@ export default function SourceCard({ source }: { source: Source }) {
       <div className="opacity-45 text-[11px] font-en">
         {source.source} · {source.category}
       </div>
-      <div className="opacity-55 mt-1 leading-relaxed">{source.content}</div>
     </div>
   );
 }

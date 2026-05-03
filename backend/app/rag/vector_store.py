@@ -3,11 +3,14 @@ from typing import Any
 import chromadb
 
 
+COLLECTION_NAME = "personal_kb"
+
+
 class VectorStore:
     def __init__(self, persist_dir: str):
         self.client = chromadb.PersistentClient(path=persist_dir)
         # Use ChromaDB's default embedding function (all-MiniLM-L6-v2, runs locally)
-        self.collection = self.client.get_or_create_collection(name="personal_kb")
+        self.collection = self.client.get_or_create_collection(name=COLLECTION_NAME)
 
     def add_chunks(self, chunks: list[dict]):
         batch_size = 100
@@ -56,6 +59,13 @@ class VectorStore:
 
     def count(self) -> int:
         return self.collection.count()
+
+    def reset(self) -> None:
+        try:
+            self.client.delete_collection(name=COLLECTION_NAME)
+        except ValueError:
+            pass
+        self.collection = self.client.get_or_create_collection(name=COLLECTION_NAME)
 
     @staticmethod
     def _first_result_list(value: Any) -> list:

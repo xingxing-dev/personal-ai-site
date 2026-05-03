@@ -1,12 +1,15 @@
-import type { ChatResponse } from "@/types";
+import type { ChatHistoryMessage, ChatResponse } from "@/types";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "";
 
-export async function askQuestion(question: string): Promise<ChatResponse> {
+export async function askQuestion(
+  question: string,
+  history: ChatHistoryMessage[] = [],
+): Promise<ChatResponse> {
   const res = await fetch(`${API_BASE}/api/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question }),
+    body: JSON.stringify({ question, history }),
   });
   if (!res.ok) {
     const msg = await res.text().catch(() => "请求失败");

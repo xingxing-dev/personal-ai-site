@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     # RAG
     chroma_persist_dir: str = "./chroma_db"
     data_dir: str = "./data"
-    top_k: int = 5
-    similarity_threshold: float = 0.3
+    top_k: int = 6
+    similarity_threshold: float = 1.2
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 

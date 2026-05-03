@@ -18,7 +18,7 @@ def _iter_heading_sections(content: str) -> Iterable[tuple[str | None, str]]:
         yield current_heading, "\n".join(current_lines).strip()
 
 
-def _split_large_section(content: str, target_size: int = 500) -> list[str]:
+def _split_large_section(content: str, target_size: int = 900) -> list[str]:
     if len(content) <= target_size:
         return [content]
 
@@ -48,6 +48,7 @@ def split_documents(docs: list[dict]) -> list[dict]:
         doc_title = str(doc.get("title", ""))
         category = str(doc.get("category", ""))
         content = str(doc.get("content", ""))
+        source_chunk_index = 0
 
         for heading, section in _iter_heading_sections(content):
             if not section:
@@ -56,7 +57,7 @@ def split_documents(docs: list[dict]) -> list[dict]:
             for section_chunk in _split_large_section(section):
                 if not section_chunk:
                     continue
-                chunk_id = f"{source}:{len(chunks)}"
+                chunk_id = f"{source}:{source_chunk_index}"
                 chunks.append(
                     {
                         "chunk_id": chunk_id,
@@ -66,5 +67,6 @@ def split_documents(docs: list[dict]) -> list[dict]:
                         "content": section_chunk,
                     }
                 )
+                source_chunk_index += 1
 
     return chunks

@@ -11,6 +11,11 @@ export interface ChatMessage {
   sources?: Source[];
 }
 
+export interface ChatHistoryMessage {
+  role: "user" | "assistant";
+  content: string;
+}
+
 export interface ChatResponse {
   answer: string;
   sources: Source[];

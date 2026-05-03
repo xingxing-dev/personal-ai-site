@@ -35,6 +35,11 @@ def parse_args() -> argparse.Namespace:
         default=settings.chroma_persist_dir,
         help="ChromaDB persistence directory. Defaults to app settings.",
     )
+    parser.add_argument(
+        "--reset",
+        action="store_true",
+        help="Delete and rebuild the ChromaDB collection before ingesting.",
+    )
     return parser.parse_args()
 
 
@@ -57,6 +62,9 @@ def main() -> None:
 
     print(f"Opening ChromaDB at {persist_dir}...")
     vector_store = VectorStore(persist_dir)
+    if args.reset:
+        print("Resetting ChromaDB collection...")
+        vector_store.reset()
 
     print("Ingesting chunks into ChromaDB...")
     vector_store.add_chunks(chunks)

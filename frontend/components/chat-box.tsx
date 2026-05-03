@@ -31,7 +31,10 @@ export default function ChatBox() {
     setLoading(true);
 
     try {
-      const res = await askQuestion(q);
+      const history = messages
+        .slice(-8)
+        .map(({ role, content }) => ({ role, content }));
+      const res = await askQuestion(q, history);
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: res.answer, sources: res.sources },
@@ -112,12 +115,18 @@ export default function ChatBox() {
 
       {/* Input */}
       <div className="flex gap-2.5 p-1.5 bg-amber-900/[0.04] dark:bg-white/[0.04] rounded-[14px] border border-amber-900/10 dark:border-white/[0.08]">
-        <input
+        <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault();
+              sendMessage();
+            }
+          }}
           placeholder={d.placeholder}
-          className="flex-1 px-3.5 py-2.5 border-none bg-transparent text-sm outline-none text-inherit"
+          rows={1}
+          className="min-h-10 max-h-32 flex-1 resize-none px-3.5 py-2.5 border-none bg-transparent text-sm outline-none text-inherit leading-relaxed"
         />
         <button
           onClick={() => sendMessage()}
