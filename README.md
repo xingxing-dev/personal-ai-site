@@ -210,7 +210,7 @@ For VPS deployment, the repository also includes:
 - `frontend/Dockerfile`
 - `nginx.conf`
 
-See [DEPLOY.md](./DEPLOY.md) for detailed deployment notes.
+See [DEPLOY.md](./DEPLOY.md) for detailed deployment notes and [MAINTENANCE.md](./MAINTENANCE.md) for long-term maintenance.
 
 ## 🔌 API
 

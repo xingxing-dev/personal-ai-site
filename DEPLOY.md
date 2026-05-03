@@ -1,5 +1,7 @@
 # 快速部署
 
+长期维护、排障和升级路线见 [MAINTENANCE.md](./MAINTENANCE.md)。
+
 ## 推荐免费方案：Vercel + Render + Cloudflare
 
 适合没有服务器、想先用免费额度上线个人站。

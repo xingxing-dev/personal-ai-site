@@ -210,7 +210,7 @@ NEXT_PUBLIC_API_BASE_URL=https://your-render-backend.onrender.com
 - `frontend/Dockerfile`
 - `nginx.conf`
 
-详细说明见 [DEPLOY.md](./DEPLOY.md)。
+详细部署说明见 [DEPLOY.md](./DEPLOY.md)，长期维护说明见 [MAINTENANCE.md](./MAINTENANCE.md)。
 
 ## 🔌 API
 
